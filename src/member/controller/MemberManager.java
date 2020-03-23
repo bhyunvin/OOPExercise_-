@@ -60,7 +60,17 @@ public class MemberManager {
 	}
 	
 	public void searchEmail() {
+		System.out.println("검색할 이메일을 입력하세요 : ");
+		String email = sc.next();
 		
+		for(int i = 0; i < m.length; i++) {
+			if(m[i].getEmail() == email) {
+				printOne(m[i]);
+			} else {
+				System.out.println("검색하신 회원 정보가 존재하지 않습니다.");
+				return;
+			}
+		}
 	}
 	
 	public void updatePwd() {
