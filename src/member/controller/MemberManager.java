@@ -35,7 +35,7 @@ public class MemberManager {
 		System.out.print("검색할 아이디를 입력하세요 : ");
 		String userId = sc.next();
 		
-		for(int i = 0; i < m.length; i++) {
+		for(int i = 0; i < ctn; i++) {
 			if(m[i].getUserId().equals(userId)) {
 				printOne(m[i]);
 			} else {
@@ -49,7 +49,7 @@ public class MemberManager {
 		System.out.print("검색할 이름을 입력하세요 : ");
 		String userName = sc.next();
 		
-		for(int i = 0; i < m.length; i++) {
+		for(int i = 0; i < ctn; i++) {
 			if(m[i].getUserName().equals(userName)) {
 				printOne(m[i]);
 			} else {
@@ -63,7 +63,7 @@ public class MemberManager {
 		System.out.print("검색할 이메일을 입력하세요 : ");
 		String email = sc.next();
 		
-		for(int i = 0; i < m.length; i++) {
+		for(int i = 0; i < ctn; i++) {
 			if(m[i].getEmail().equals(email)) {
 				printOne(m[i]);
 			} else {
@@ -79,7 +79,7 @@ public class MemberManager {
 		int sw = 0;
 		int index = 0;
 		
-		for(int i = 0; i < m.length; i++) {
+		for(int i = 0; i < ctn; i++) {
 			if(m[i].getUserId().equals(userId)) {
 				sw = 1;
 				index = i;
@@ -107,7 +107,7 @@ public class MemberManager {
 		int sw = 0;
 		int index = 0;
 		
-		for(int i = 0; i < m.length; i++) {
+		for(int i = 0; i < ctn; i++) {
 			if(m[i].getUserId().equals(userId)) {
 				sw = 1;
 				index = i;
@@ -135,7 +135,7 @@ public class MemberManager {
 		int sw = 0;
 		int index = 0;
 		
-		for(int i = 0; i < m.length; i++) {
+		for(int i = 0; i < ctn; i++) {
 			if(m[i].getUserId().equals(userId)) {
 				sw = 1;
 				index = i;
@@ -161,9 +161,9 @@ public class MemberManager {
 		System.out.print("탈퇴할 회원의 아이디를 입력하세요 : ");
 		String userId = sc.next();
 		
-		for(int i = 0; i < m.length; i++) {
+		for(int i = 0; i < ctn; i++) {
 			if(m[i].getUserId().equals(userId)) {
-				for(int j = i + 1; j < m.length - i; j++) {
+				for(int j = i + 1; j < ctn - i; j++) {
 					m[i] = new Member(m[j].getUserId(), m[j].getUserPwd(), m[j].getUserName(), m[j].getAge(), m[j].getGender(), m[j].getEmail());
 					ctn--;
 				}
@@ -174,7 +174,7 @@ public class MemberManager {
 	}
 	
 	public void deleteAll() {
-		for(int i = 0; i < m.length; i++) {
+		for(int i = 0; i < ctn; i++) {
 			m[i].setUserId(null);
 			m[i].setUserPwd(null);
 			m[i].setUserName(null);
@@ -186,7 +186,16 @@ public class MemberManager {
 	}
 	
 	public void printAllMember() {
-		
+		for(int i = 0; i < ctn; i++) {
+			System.out.println((i + 1) + "번째 유저입니다.");
+			System.out.println("ID는 : " + m[i].getUserId());
+			System.out.println("PassWord는 : " + m[i].getUserPwd());
+			System.out.println("이름은 : " + m[i].getUserName());
+			System.out.println("나이는 : " + m[i].getAge());
+			System.out.println("성별은 : " + m[i].getGender());
+			System.out.println("이메일은 : " + m[i].getEmail());
+			System.out.println("==================");
+		}
 	}
 	
 	public void printOne(Member m) {
