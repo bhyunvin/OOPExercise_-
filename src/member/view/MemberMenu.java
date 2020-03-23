@@ -64,6 +64,14 @@ public class MemberMenu {
 			System.out.println("9. 메인메뉴로");
 			System.out.println("===============================");
 			System.out.print("메뉴 번호를 입력하세요 : ");
+			int num = sc.nextInt();
+			
+			switch(num) {
+			case 1 : mm.updatePwd(); break;
+			case 2 : mm.updateName(); break;
+			case 3 : mm.updateEmail(); break;
+			case 9 : System.out.println("메인 메뉴로 이동합니다."); return;
+			}
 		} while(true);
 	}
 }
