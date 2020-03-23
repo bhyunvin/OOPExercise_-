@@ -36,7 +36,7 @@ public class MemberManager {
 		String userId = sc.next();
 		
 		for(int i = 0; i < m.length; i++) {
-			if(m[i].getUserId() == userId) {
+			if(m[i].getUserId().equals(userId)) {
 				printOne(m[i]);
 			} else {
 				System.out.println("검색하신 회원 정보가 존재하지 않습니다.");
@@ -46,11 +46,11 @@ public class MemberManager {
 	}
 	
 	public void searchName() {
-		System.out.println("검색할 이름을 입력하세요 : ");
+		System.out.print("검색할 이름을 입력하세요 : ");
 		String userName = sc.next();
 		
 		for(int i = 0; i < m.length; i++) {
-			if(m[i].getUserName() == userName) {
+			if(m[i].getUserName().equals(userName)) {
 				printOne(m[i]);
 			} else {
 				System.out.println("검색하신 회원 정보가 존재하지 않습니다.");
@@ -60,11 +60,11 @@ public class MemberManager {
 	}
 	
 	public void searchEmail() {
-		System.out.println("검색할 이메일을 입력하세요 : ");
+		System.out.print("검색할 이메일을 입력하세요 : ");
 		String email = sc.next();
 		
 		for(int i = 0; i < m.length; i++) {
-			if(m[i].getEmail() == email) {
+			if(m[i].getEmail().equals(email)) {
 				printOne(m[i]);
 			} else {
 				System.out.println("검색하신 회원 정보가 존재하지 않습니다.");
@@ -74,7 +74,31 @@ public class MemberManager {
 	}
 	
 	public void updatePwd() {
+		System.out.print("수정할 회원의 아이디를 입력하세요 : ");
+		String userId = sc.next();
+		int sw = 0;
+		int index = 0;
 		
+		for(int i = 0; i < m.length; i++) {
+			if(m[i].getUserId().equals(userId)) {
+				sw = 1;
+				index = i;
+				break;
+			} else {
+				sw = 0;
+			}
+		}
+		
+		if(sw == 1) {
+			System.out.print("변경하실 비밀번호를 입력해주세요 : ");
+			String userPwd = sc.next();
+			m[index].setUserPwd(userPwd);
+			System.out.println("패스워드 수정이 완료되었습니다.");
+			return;
+		} else {
+			System.out.println("수정할 회원이 존재하지 않습니다.");
+			return;
+		}
 	}
 	
 	public void updateName() {
