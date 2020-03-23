@@ -130,7 +130,31 @@ public class MemberManager {
 	}
 	
 	public void updateEmail() {
+		System.out.print("수정할 회원의 아이디를 입력하세요 : ");
+		String userId = sc.next();
+		int sw = 0;
+		int index = 0;
 		
+		for(int i = 0; i < m.length; i++) {
+			if(m[i].getUserId().equals(userId)) {
+				sw = 1;
+				index = i;
+				break;
+			} else {
+				sw = 0;
+			}
+		}
+		
+		if(sw == 1) {
+			System.out.print("변경하실 이메일을 입력해주세요 : ");
+			String userEmail = sc.next();
+			m[index].setEmail(userEmail);
+			System.out.println("이메일 수정이 완료되었습니다.");
+			return;
+		} else {
+			System.out.println("수정할 회원이 존재하지 않습니다.");
+			return;
+		}
 	}
 	
 	public void deleteOne() {
