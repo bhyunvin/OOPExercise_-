@@ -38,9 +38,9 @@ public class MemberManager {
 		for(int i = 0; i < ctn; i++) {
 			if(m[i].getUserId().equals(userId)) {
 				printOne(m[i]);
+				break;
 			} else {
-				System.out.println("검색하신 회원 정보가 존재하지 않습니다.");
-				return;
+				System.out.println("검색한 회원 정보가 존재하지 않습니다.");
 			}
 		}
 	}
@@ -52,23 +52,23 @@ public class MemberManager {
 		for(int i = 0; i < ctn; i++) {
 			if(m[i].getUserName().equals(userName)) {
 				printOne(m[i]);
+				break;
 			} else {
-				System.out.println("검색하신 회원 정보가 존재하지 않습니다.");
-				return;
+				System.out.println("검색한 회원 정보가 존재하지 않습니다.");
 			}
 		}
 	}
 	
 	public void searchEmail() {
 		System.out.print("검색할 이메일을 입력하세요 : ");
-		String email = sc.next();
+		String userEmail = sc.next();
 		
 		for(int i = 0; i < ctn; i++) {
-			if(m[i].getEmail().equals(email)) {
+			if(m[i].getEmail().equals(userEmail)) {
 				printOne(m[i]);
+				break;
 			} else {
-				System.out.println("검색하신 회원 정보가 존재하지 않습니다.");
-				return;
+				System.out.println("검색한 회원 정보가 존재하지 않습니다.");
 			}
 		}
 	}
