@@ -13,15 +13,15 @@ public class MemberMenu {
 	
 	public void mainMenu() {
 		do {
-			System.out.println("========== È¸¿ø °ü¸® ¸Ş´º ==========");
-			System.out.println("1. ½Å±Ô È¸¿ø µî·Ï");
-			System.out.println("2. È¸¿ø Á¤º¸ °Ë»ö");
-			System.out.println("3. È¸¿ø Á¤º¸ ¼öÁ¤");
-			System.out.println("4. È¸¿ø Á¤º¸ »èÁ¦");
-			System.out.println("5. È¸¿ø Á¤º¸ Ãâ·Â");
-			System.out.println("9. Á¾·á");
+			System.out.println("========== íšŒì› ê´€ë¦¬ ë©”ë‰´ ==========");
+			System.out.println("1. ì‹ ê·œ íšŒì› ë“±ë¡");
+			System.out.println("2. íšŒì› ì •ë³´ ê²€ìƒ‰");
+			System.out.println("3. íšŒì› ì •ë³´ ìˆ˜ì •");
+			System.out.println("4. íšŒì› ì •ë³´ ì‚­ì œ");
+			System.out.println("5. íšŒì› ì •ë³´ ì¶œë ¥");
+			System.out.println("9. ì¢…ë£Œ");
 			System.out.println("================================");
-			System.out.print("¸Ş´º ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+			System.out.print("ë©”ë‰´ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 			int num = sc.nextInt();
 			
 			switch(num) {
@@ -30,65 +30,65 @@ public class MemberMenu {
 			case 3 : updateMemberMenu(); break;
 			case 4 : deleteMemberMenu(); break;
 			case 5 : mm.printAllMember(); break;
-			case 9 : System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù."); return;
+			case 9 : System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤."); return;
 			}
 		} while(true);
 	}
 	
 	public void searchMemberMenu() {
 		do {
-			System.out.println("========== È¸¿ø Á¤º¸ °Ë»ö ==========");
-			System.out.println("1. ¾ÆÀÌµğ·Î °Ë»öÇÏ±â");
-			System.out.println("2. ÀÌ¸§À¸·Î °Ë»öÇÏ±â");
-			System.out.println("3. ÀÌ¸ŞÀÏ·Î °Ë»öÇÏ±â");
-			System.out.println("9. ¸ŞÀÎ¸Ş´º·Î");
+			System.out.println("========== íšŒì› ì •ë³´ ê²€ìƒ‰ ==========");
+			System.out.println("1. ì•„ì´ë””ë¡œ ê²€ìƒ‰í•˜ê¸°");
+			System.out.println("2. ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰í•˜ê¸°");
+			System.out.println("3. ì´ë©”ì¼ë¡œ ê²€ìƒ‰í•˜ê¸°");
+			System.out.println("9. ë©”ì¸ë©”ë‰´ë¡œ");
 			System.out.println("===============================");
-			System.out.print("¸Ş´º ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+			System.out.print("ë©”ë‰´ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 			int num = sc.nextInt();
 			
 			switch(num) {
 			case 1 : mm.searchId(); break;
 			case 2 : mm.searchName(); break;
 			case 3 : mm.searchEmail(); break;
-			case 9 : System.out.println("¸ŞÀÎ¸Ş´º·Î ÀÌµ¿ÇÕ´Ï´Ù."); return;
+			case 9 : System.out.println("ë©”ì¸ë©”ë‰´ë¡œ ì´ë™í•©ë‹ˆë‹¤."); return;
 			}
 		} while(true);
 	}
 	
 	public void updateMemberMenu() {
 		do {
-			System.out.println("========== È¸¿ø Á¤º¸ ¼öÁ¤ ==========");
-			System.out.println("1. ºñ¹Ğ¹øÈ£ ¼öÁ¤ÇÏ±â");
-			System.out.println("2. ÀÌ¸§ ¼öÁ¤ÇÏ±â");
-			System.out.println("3. ÀÌ¸ŞÀÏ ¼öÁ¤ÇÏ±â");
-			System.out.println("9. ¸ŞÀÎ¸Ş´º·Î");
+			System.out.println("========== íšŒì› ì •ë³´ ìˆ˜ì • ==========");
+			System.out.println("1. ë¹„ë°€ë²ˆí˜¸ ìˆ˜ì •í•˜ê¸°");
+			System.out.println("2. ì´ë¦„ ìˆ˜ì •í•˜ê¸°");
+			System.out.println("3. ì´ë©”ì¼ ìˆ˜ì •í•˜ê¸°");
+			System.out.println("9. ë©”ì¸ë©”ë‰´ë¡œ");
 			System.out.println("===============================");
-			System.out.print("¸Ş´º ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+			System.out.print("ë©”ë‰´ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 			int num = sc.nextInt();
 			
 			switch(num) {
 			case 1 : mm.updatePwd(); break;
 			case 2 : mm.updateName(); break;
 			case 3 : mm.updateEmail(); break;
-			case 9 : System.out.println("¸ŞÀÎ ¸Ş´º·Î ÀÌµ¿ÇÕ´Ï´Ù."); return;
+			case 9 : System.out.println("ë©”ì¸ ë©”ë‰´ë¡œ ì´ë™í•©ë‹ˆë‹¤."); return;
 			}
 		} while(true);
 	}
 	
 	public void deleteMemberMenu() {
 		do {
-			System.out.println("=========== È¸¿ø Á¤º¸ »èÁ¦ ===========");
-			System.out.println("1. È¸¿ø »èÁ¦");
-			System.out.println("2. ÀüÃ¼ È¸¿ø »èÁ¦");
-			System.out.println("9. ¸ŞÀÎ¸Ş´º·Î");
+			System.out.println("=========== íšŒì› ì •ë³´ ì‚­ì œ ===========");
+			System.out.println("1. íšŒì› ì‚­ì œ");
+			System.out.println("2. ì „ì²´ íšŒì› ì‚­ì œ");
+			System.out.println("9. ë©”ì¸ë©”ë‰´ë¡œ");
 			System.out.println("=================================");
-			System.out.print("¸Ş´º ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+			System.out.print("ë©”ë‰´ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 			int num = sc.nextInt();
 			
 			switch(num) {
 			case 1 : mm.deleteOne(); break;
 			case 2 : mm.deleteAll(); break;
-			case 9 : System.out.println("¸ŞÀÎ¸Ş´º·Î ÀÌµ¿ÇÕ´Ï´Ù."); return;
+			case 9 : System.out.println("ë©”ì¸ë©”ë‰´ë¡œ ì´ë™í•©ë‹ˆë‹¤."); return;
 			}
 		} while(true);
 	}
